@@ -33,8 +33,8 @@ async def start(event):
         buttons=[
             [Button.inline("HELP👩", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="http://telegra.ph/Pasted-content-by-theuserge-09-01-6"),
-                Button.url("DEVELOPER", url="https://t.me/msg_owner_bot"),
+                Button.url("SOURCE CODE", url="https://telegra.ph/තට-ඒ-මගල-වලන-වඩක-න-නහ-09-17"),
+                Button.url("DEVELOPER", url="https://t.me/mthownerRobot"),
             ],
         ],
     )
@@ -48,7 +48,7 @@ async def help(event):
 
 async def ihelp(event):
     await event.edit(
-        "This Bot Compress Videos With Negligible Quality Change.\n✦Generate Sample Compressed Video\n✦Easy to Use\n✦Due to Quality Settings Bot Takes Time To Compress\n✦So Be patience & Send videos One By One After Completing\n**.**Dont Spam Bot\n✦Just Forward Video To Get Options",
+        "This Bot Compress Videos With Negligible Quality Change.\n✦Generate Sample Compressed Video\n✦Easy to Use\n✦Due to Quality Settings Bot Takes Time To Compress\n✦So Be patience & Send videos One By One After Completing\n**.**Dont Spam Bot.Spam කරොත් තොගෙ බෙල්ල කඩනවා\n✦Just Forward Video To Get Options",
         buttons=[Button.inline("<<BACK", data="beck")],
     )
 
@@ -60,8 +60,8 @@ async def beck(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="http://telegra.ph/Pasted-content-by-theuserge-09-01-6"),
-                Button.url("DEVELOPER", url="https://t.me/msg_owner_bot"),
+                Button.url("SOURCE CODE", url="https://telegra.ph/තට-ඒ-මගල-වලන-වඩක-න-නහ-09-17"),
+                Button.url("DEVELOPER", url="https://t.me/mthownerRobot"),
             ],
         ],
     )
