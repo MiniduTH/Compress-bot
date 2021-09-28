@@ -60,7 +60,7 @@ async def beck(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="https://telegra.ph/තට-ඒ-මගල-වලන-වඩක-න-නහ-09-17"),
+                Button.url("SOURCE CODE", url="https://telegra.ph/%E0%B6%AD%E0%B6%A7-%E0%B6%92-%E0%B6%B8%E0%B6%9C%E0%B6%BD-%E0%B7%80%E0%B6%BD%E0%B6%B1-%E0%B7%80%E0%B6%A9%E0%B6%9A-%E0%B6%B1-%E0%B6%B1%E0%B7%84-09-17"),
                 Button.url("DEVELOPER", url="https://t.me/mthownerRobot"),
             ],
         ],
