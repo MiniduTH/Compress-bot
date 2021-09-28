@@ -41,7 +41,7 @@ async def screenshot(e):
                     Button.inline("GENERATE SAMPLE", data=f"gsmpl{wah}"),
                     Button.inline("COMPRESS", data=f"sencc{wah}"),
                 ],
-                [Button.inline("SKIP", data=f"skip{wah}")],
+                [Button.inline("SKIP>>", data=f"skip{wah}")],
             ],
         )
         COUNT.remove(e.chat_id)
@@ -79,7 +79,7 @@ async def encc(e):
                 [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
             ],
         )
-        cmd = f'ffmpeg -i  "{dl}" -map 0 -c:v libx265 -metadata title=HEVCEncodes -pix_fmt yuv420p -preset fast -s 1280x720 -crf 29 -b:v 2M -profile:a  aac_he_v2 -c:a libopus -ac 2 -vbr 2 -ab 40k -c:s copy "{out}" -y'
+        cmd = f'ffmpeg -i  "{dl}" -map 0 -c:v libx265 -metadata title=HEVCEncodes -pix_fmt yuv420p -preset fast -s 854×480 -crf 29 -b:v 2M -profile:a  aac_he_v2 -c:a libopus -ac 2 -vbr 2 -ab 40k -c:s copy "{out}" -y'
         process = await asyncio.create_subprocess_shell(
             cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
@@ -123,7 +123,7 @@ async def encc(e):
         a1 = await info(dl, e)
         a2 = await info(out, e)
         dk = await ds.reply(
-            f"●Original Size : {hbs(org)}\n●Compressed Size : {hbs(com)}\n●Compressed Percentage : {per}\n\n●Mediainfo: [Before]({a1})//[After]({a2})\n\n●Downloaded in {x}\n●Compressed in {xx}\n●Uploaded in {xxx}\n\nDone #COMPRESS #720p",
+            f"●Original Size : {hbs(org)}\n●Compressed Size : {hbs(com)}\n●Compressed Percentage : {per}\n\n●Mediainfo: [Before]({a1})//[After]({a2})\n\n●Downloaded in {x}\n●Compressed in {xx}\n●Uploaded in {xxx}\n\nDone #compress #480p",
             link_preview=False,
         )
         await ds.forward_to(LOG)
@@ -229,7 +229,7 @@ async def encod(event):
             )
         if user.id in COUNT and user.id != OWNER:
             return await xxx.edit(
-                "Already Your 1 Request Processing\nKindly Wait For it to Finish"
+                "Already Your 1 Request Processing\nKindly Send Another Video After Download This."
             )
         COUNT.append(user.id)
         s = dt.now()
@@ -238,7 +238,7 @@ async def encod(event):
         gg = await event.client.get_entity(user.id)
         name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
         await event.client.send_message(
-            LOG, f"{len(COUNT)} Downloading Started for user - {name}\n\n#720p"
+            LOG, f"{len(COUNT)} Downloading Started for user - {name}"
         )
         dir = f"downloads/{user.id}/"
         if not os.path.isdir(dir):
@@ -376,7 +376,7 @@ async def customenc(e, key):
     a1 = await info(dl, e)
     a2 = await info(out, e)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\n●Compressed Size : {hbs(com)}\n●Compressed Percentage : {per}\n\n●Mediainfo: [Before]({a1})//[After]({a2})\n\n●Downloaded in {x}\n●Compressed in {xx}\n●Uploaded in {xxx}\n\nDone #COMPRESS #720p",
+        f"Original Size : {hbs(org)}\n●Compressed Size : {hbs(com)}\n●Compressed Percentage : {per}\n\n●Mediainfo: [Before]({a1})//[After]({a2})\n\n●Downloaded in {x}\n●Compressed in {xx}\n●Uploaded in {xxx}\n\nDone #compress  #480p",
         link_preview=False,
     )
     await ds.forward_to(LOG)
